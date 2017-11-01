@@ -1,0 +1,7 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="pageLoaded">
+    <GridLayout rows="25,*,25" columns="*">
+        <Label text="CHANNEL" row="0" col="0" />
+        <WebView id="webView" height="75%" row="1" column="0" />
+        <Button text="back" row="2" col="0" tap="todoBackAction" />
+    </GridLayout>
+</Page>
