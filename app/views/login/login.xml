@@ -1,0 +1,12 @@
+<Page loaded="loaded">
+    <StackLayout orientation="vertical">
+
+        <TextField id="email" text="{{ email }}" hint="Email Address" keyboardType="email" autocorrect="false" autocapitalizationType="none" />
+        <TextField secure="true" text="{{ password }}" hint="Password" />
+
+        <Button text="Sign in" tap="signIn" />
+        <Button text="Sign up" class="link" tap="register" />
+        <Button text="Google Sign up" class="link" tap="google_register" />
+        <ActivityIndicator busy="{{ isLoading }}" />        
+    </StackLayout>
+</Page>
