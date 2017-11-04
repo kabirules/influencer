@@ -9,7 +9,8 @@ function User(info) {
     // You can add properties to observables on creation
     var viewModel = new observableModule.fromObject({
         email: info.email || "",
-        password: info.password || ""
+        password: info.password || "",
+        youtubeChannel: '' || ""
     });
 
     viewModel.login = function() {
@@ -84,6 +85,16 @@ function User(info) {
         );        
     }
 
+    //TODO it will remove all children from username, fix it
+    viewModel.setYoutubeChannel = function(username, channel) {
+        username = username.replaceAll(username, ".","-");
+        return firebase.setValue(
+            username,
+            {youtubeChannel: channel}
+        );
+    }
+
+
     viewModel.query = function() {
         firebase.query(
             onQueryEvent,
@@ -136,5 +147,16 @@ function handleErrors(response) {
     }
     return response;
 }
+
+//Replace all chars from string.
+//Useful to remove dots from emails and make them valid for json key.
+String.prototype.replaceAll = function(text, search, replacement) {
+    console.log('text: ' || text);
+    while (text.indexOf(search) > -1) {
+        text = text.replace(search,replacement);
+        console.log(text);
+    }
+    return text;
+};
 
 module.exports = User;

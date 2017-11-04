@@ -1,4 +1,4 @@
-<Page loaded="loaded">
+<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="loaded">
     <StackLayout orientation="vertical">
 
         <TextField id="email" text="{{ email }}" hint="Email Address" keyboardType="email" autocorrect="false" autocapitalizationType="none" />
