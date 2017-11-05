@@ -1,8 +1,10 @@
 <Page xmlns="http://www.nativescript.org/tns.xsd" loaded="loaded">
     <StackLayout>
-        <Label text="Welcome!" />
-        <Label text="Channel name" />
-        <TextField id="youtubeChannel" text="{{ youtubeChannel }}" />
+        <Label id="lblWelcome" text="" />
+        <GridLayout rows="auto, auto" columns="auto">
+            <Label id="lblYoutubeChannel" text="Youtube channel..." row="0" column="0" />
+            <TextField id="youtubeChannel" text="{{ youtubeChannel }}" row="1" column="0" />
+        </GridLayout>
         <Button text="Add (set)" tap="setYoutubeChannel" />
         <Button text="Add (update)" tap="updateYoutubeChannel" />
         <Button text="Add (push)" tap="pushYoutubeChannel" />

@@ -136,14 +136,41 @@ function User(info) {
         );
     }
 
+    viewModel.queryYoutubeChannel = function(username) {
+        username = username.replaceAll(username, ".","-");
+        firebase.query(
+            getYoutubeChannelFromQuery,
+            "/users/"+username,
+            {
+                singleEvent: true,
+                orderBy: {
+                    type: firebase.QueryOrderByType.CHILD,
+                    value: 'since'
+                }
+            }
+        );
+    }    
+
     viewModel.delete = function(index) {
         //var id = viewModel.getItem(index).id;
         id = '-KvI6UEfPfmh0ooH4jT5';
         return firebase.remove("/Groceries/"+id+"");
     };
 
+    var getYoutubeChannelFromQuery = function(result) {
+        for (i in result.value){
+            for (key in result.value[i]){
+                if (key=="youtubeChannel") {
+                    viewModel.youtubeChannel = result.value[i][key];
+                }
+            }
+        }
+    };    
+
     return viewModel;
 }
+
+
 
 var onQueryEvent = function(result) {
     // note that the query returns 1 match at a time
@@ -167,10 +194,8 @@ function handleErrors(response) {
 //Replace all chars from string.
 //Useful to remove dots from emails and make them valid for json key.
 String.prototype.replaceAll = function(text, search, replacement) {
-    console.log('text: ' || text);
     while (text.indexOf(search) > -1) {
         text = text.replace(search,replacement);
-        console.log(text);
     }
     return text;
 };
