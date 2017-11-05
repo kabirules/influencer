@@ -3,6 +3,8 @@
         <Label text="Welcome!" />
         <Label text="Channel name" />
         <TextField id="youtubeChannel" text="{{ youtubeChannel }}" />
-        <Button text="Add" tap="setYoutubeChannel" />
+        <Button text="Add (set)" tap="setYoutubeChannel" />
+        <Button text="Add (update)" tap="updateYoutubeChannel" />
+        <Button text="Add (push)" tap="pushYoutubeChannel" />
     </StackLayout>
 </Page>

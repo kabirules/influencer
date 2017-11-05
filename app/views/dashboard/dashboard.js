@@ -26,3 +26,33 @@ exports.setYoutubeChannel = function(args) {
         //page.getViewById('field1').text = '';
     });
 }
+
+exports.updateYoutubeChannel = function(args) {
+    xmlYoutubeChannel = page.getViewById('youtubeChannel');
+    user.youtubeChannel = xmlYoutubeChannel.text;
+    user.setYoutubeChannel(user.email, user.youtubeChannel)
+    .catch(function(error) {
+        console.log(error);
+        return Promise.reject();
+    })
+    .then(function(result) {
+        console.log('setYoutubeChannel result: ');
+        console.log(result);
+        //page.getViewById('field1').text = '';
+    });
+}
+
+exports.pushYoutubeChannel = function(args) {
+    xmlYoutubeChannel = page.getViewById('youtubeChannel');
+    user.youtubeChannel = xmlYoutubeChannel.text;
+    user.pushYoutubeChannel(user.email, user.youtubeChannel)
+    .catch(function(error) {
+        console.log(error);
+        return Promise.reject();
+    })
+    .then(function(result) {
+        console.log('setYoutubeChannel result: ');
+        console.log(result);
+        //page.getViewById('field1').text = '';
+    });
+}

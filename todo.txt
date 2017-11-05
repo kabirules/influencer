@@ -1,0 +1,12 @@
+User object
+ - username (email without dots?)
+ - email
+ - youtube channel
+ - twitter user
+ - instagram user
+ - youtube subscriptions
+ - youtube subscriptors
+ - twitter follows
+ - twitter followers
+ - instagram follows
+ - instagram followers

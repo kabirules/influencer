@@ -94,6 +94,22 @@ function User(info) {
         );
     }
 
+    //TODO it will remove all children from username, fix it
+    viewModel.updateYoutubeChannel = function(username, channel) {
+        username = username.replaceAll(username, ".","-");
+        return firebase.update(
+            username,
+            {youtubeChannel: channel}
+        );
+    }
+
+    viewModel.pushYoutubeChannel = function(username, channel) {
+        username = username.replaceAll(username, ".","-");
+        return firebase.push( '/users/'+username, 
+            {youtubeChannel: channel}
+        );
+    }    
+
 
     viewModel.query = function() {
         firebase.query(
