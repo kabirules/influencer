@@ -7,6 +7,9 @@
     "id": "com.mimostudios.influencer",
     "tns-ios": {
       "version": "3.2.0"
+    },
+    "tns-android": {
+      "version": "3.3.0"
     }
   },
   "dependencies": {
@@ -14,5 +17,10 @@
     "nativescript-theme-core": "~1.0.2",
     "tns-core-modules": "~3.2.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "babel-traverse": "6.4.5",
+    "babel-types": "6.4.5",
+    "babylon": "6.4.5",
+    "lazy": "1.0.11"
+  }
 }

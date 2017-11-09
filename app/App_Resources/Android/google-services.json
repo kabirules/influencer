@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "525289777567",
+    "firebase_url": "https://vanillajs-0000.firebaseio.com",
+    "project_id": "vanillajs-0000",
+    "storage_bucket": "vanillajs-0000.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:525289777567:android:14e853f0813c6d49",
+        "android_client_info": {
+          "package_name": "com.mimostudios.influencer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "525289777567-mmavsepg96ap2t0g8oicalv6mbgopb4h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBBzu5wpxACwiyCP_ujtlzSYZZFFEODPKI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
